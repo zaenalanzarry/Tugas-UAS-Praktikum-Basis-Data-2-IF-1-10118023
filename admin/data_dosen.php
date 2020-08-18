@@ -86,12 +86,11 @@ if(!isset($_SESSION['username']))
                       <th>Agama</th>
                       <th>Aksi</th>
                     </tr>
-					 <?php
-							$sql='select * from data_dosen ORDER BY nip DESC';
-							$query = mysqli_query($koneksi,$sql);
-							while($data = mysqli_fetch_array($query)){
-								
-				?>
+			<?php
+				$sql='select * from data_dosen ORDER BY nip DESC';
+			  	$query = mysqli_query($koneksi,$sql);
+				while($data = mysqli_fetch_array($query)){							
+			?>
                     <tr>
                       <td><?php echo $data['nip']; ?></td>
                       <td><?php echo $data['nama_dosen']; ?></td>
